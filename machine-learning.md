@@ -32,20 +32,43 @@
   4. overfitting: train error is low and validation error much higher than train error
   5. use regularization with different values of lambda (regularization parameter) 
   6. select best model where cross validation error is low and also test error is also low
-  7. high bias
+  7. if there is no regularization then the model overfits, if there is too much regularization model underfits
+  8. in case of classification we can also compute misclassification error
+  9. high bias (plot error against train size)
     * if training set is small then model can fit the training data well. however cross validation error is usually high
     * if training set is large then training and cross validation error will be high
-  8. high variance
+  10. high variance (plot error against train size)
     * if training set is small then model can fit the training data well. however cross validation error is usually high
     * if training set is large then training error is very low but cross validation error is much higher
-  9. fix high bias
+  11. fix high bias
     * add more features
     * add polynomial features
     * decrease regularization
-  10. fix high variance
+  12. fix high variance
     * get more training data
     * try less features
     * increase regularization
   Q. how to determine if cross validation error is much higher than training error? how much difference is acceptable?
 
+* work prioritization
+  1. error analysis
+    * implement a simple model quickly
+    * plot learning curves to identify if we are suffering from high bias / high variance
+    * manually look in to data points where alorithm is making errors to develop better features
+    * have a numerical measure to evaluate algorithm
+  2. handling skewed classes
+    * only classification accuracy is not the right metric
+    * precision and recall
+    * precision = true positives / predicted positives , predicted positives = true positives + false positives
+    * recall = true positives / actual positives, actual positives = true positives + false negatives
+    * precision and recall are defined for the rare class being 1 and non rare class being 0
+    * high precision and high recall is the best model
+    * predict true if only we are very confident: high precision and low recall
+    * avoid false negatives: high recall less precision
+    * comparing precision and recall values for multiple algorithms: f1-score if large precision and recall both large
+  3. how much data to train?
+    * as training set size increases performance of algorithm generally improves
+    * use algorithm with many parameters: low bias, if we have large training data then it is unlikely to overfit
+    * training error ~ test error => good algorithm, did not overfit
 
+  

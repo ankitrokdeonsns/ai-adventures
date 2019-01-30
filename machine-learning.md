@@ -53,7 +53,7 @@
 * work prioritization
   1. error analysis
     * implement a simple model quickly
-    * plot learning curves to identify if we are suffering from high bias / high variance
+    * plot learning curves (error against training set size) to identify if we are suffering from high bias / high variance
     * manually look in to data points where alorithm is making errors to develop better features
     * have a numerical measure to evaluate algorithm
   2. handling skewed classes

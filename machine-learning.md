@@ -71,4 +71,19 @@
     * use algorithm with many parameters: low bias, if we have large training data then it is unlikely to overfit
     * training error ~ test error => good algorithm, did not overfit
 
+* SVM
+  1. choose linear kernel (equivalent to no kernel or logistic regression) when data is small and number of features is large
+  2. choose gaussian kernel when data is large and no. of features is small
+  3. perform feature scaling before using gaussian kernel
+  4. kernel is a measure of similarity between datapoints
+  5. if training data is less choose simple model
+  6. if no. of features is small and data is not too large use gaussian kernel
+  7. if no. of features is small and data is very large develop more features and choose logistic regression
+
+* k means clustering
+  * choose k cluster centers randomly
+  * assign data points to one of the cluster centers
+  * when all points are assigned a cluster center compute new centroids based on assigned data points
+  * repeat till cluster centroids do not change significantly
+
   

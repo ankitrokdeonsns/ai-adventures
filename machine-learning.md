@@ -85,5 +85,28 @@
   * assign data points to one of the cluster centers
   * when all points are assigned a cluster center compute new centroids based on assigned data points
   * repeat till cluster centroids do not change significantly
+  * k means can get stuck in local minimum thus giving sub optimal clusters, hence perform multiple random initializations for a given number of clusters and finally set the cluster centers to be the most frequently occuring
+  * finding optimal number of clusters => plot cost function against number of clusters and choose the elbow point but not guaranteed to find the elbow point
 
-  
+* dimensionality reduction
+
+* anomaly detection
+  * given a set of examples and a new example predict whether the new example is anomalous
+  * build a probability distribution of examples and check if new example belongs to that distribution
+  * algorithm
+    * build features
+    * for each feature find mean and variance
+    * model distribution of data as product of distribution of individual features
+    * anomalous example if probability of new data point is less than some threshold
+    * we generally assume training data is non anomalous
+  * comparison with supervised learning
+    * class distribution is skewed in case of anomaly detection
+    * anomalies have no one way of existing
+  * choosing features
+    * features should ideally be closer to gaussian distribution
+    * if not then perform feature transformations to make it more gaussian
+  * multivariate gaussian distribution can capture correlation between features
+  * simple model where every feature is treated independently is computationally cheaper and can scale to large datasets
+  * simple model works even if training data is small, multivariate gaussian requires number of examples to be more than number of features
+
+   

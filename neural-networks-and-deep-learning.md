@@ -18,3 +18,8 @@
     * all hidden units compute the same function
     * we need different hidden units to compute different functions 
   * we also need w values not to be too large since for large values gradients of tanh and sigmoid change very slowly thus slowing down the learning process via gradient descent
+
+* dimensions of weight matrices and biases
+  W[layer] = (nodes[layer], nodes[layer - 1])
+  B[layer] = (nodes[layer], 1)
+  A[layer] = (nodes[layer], num_examples) : activation of layer

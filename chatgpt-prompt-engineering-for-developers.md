@@ -36,3 +36,9 @@
 
 ## Transforming
 - translation, tone conversion, proofreading etc.
+
+## Expanding
+- opposite of summarization
+
+## Chatbot
+- build context to continue conversation

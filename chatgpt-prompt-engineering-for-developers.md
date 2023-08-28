@@ -28,3 +28,11 @@
 
 ## Iterative prompt building
 - Idea -> Prompt -> Experiment -> Error analysis -> Refine Idea -> Loop
+
+## Summarizing
+
+## Inference
+- building predictions, NER etc
+
+## Transforming
+- translation, tone conversion, proofreading etc.

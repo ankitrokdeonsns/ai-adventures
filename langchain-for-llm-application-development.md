@@ -23,4 +23,17 @@
 - Sequential Chains: combine multiple chains. Output of one chain is input to next
 - Router Chain: redirect to specialized prompts based on output of one prompt
 
-## Question Answer over Documents   
+## Question Answer over Documents
+- Create an index over documents using vector store
+- We can use `similarity_search` over this index to find matching documents
+- `RetrievalQA` chain provides a convinience that creates a context over all docs and then asnwers query with that context
+- There are multiple ways of creating context `map_reduce`, `refine`, `map_rerank`
+
+## Evaluating LLM Applications
+- Manual evaluation with example queries can be done but is not scalable
+- We can use `QAGenerateChain` to generate Q-A pairs
+- We can use `QAEvalChain` to evaluate generated outputs
+
+## Agents
+- LLM can be used as a reasoning engine given some context help you reason about things
+- Different tools can be intgerated to answer queries specific context
